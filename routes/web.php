@@ -59,3 +59,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
+Route::get('/forgot-password', [AuthController::class, 'showForgotPassword'])->name('forgot.password');
+Route::post('/send-reset-otp', [AuthController::class, 'sendResetOtp'])->name('send.reset.otp');
+Route::post('/verify-reset-otp', [AuthController::class, 'verifyResetOtp'])->name('verify.reset.otp');
+

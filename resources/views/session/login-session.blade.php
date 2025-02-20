@@ -25,6 +25,18 @@
             text-align: center;
             color: white;
         }
+        .form-control {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -42,7 +54,12 @@
             <input type="password" name="password" class="form-control mb-3" placeholder="Password" required>
             <button type="submit" class="btn btn-primary w-100">Login</button>
         </form>
-        <a href="{{ route('register.form') }}" class="d-block mt-3 text-light">Don't have an account? Register</a>
+        <div class="mt-3">
+            <a href="{{ route('forgot.password') }}" class="text-light">Forgot Password?</a>
+        </div>
+        <div class="mt-2">
+            <a href="{{ route('register.form') }}" class="text-light">Don't have an account? Register</a>
+        </div>
     </div>
 </body>
 </html>
